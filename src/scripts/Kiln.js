@@ -1,5 +1,6 @@
 let firedId = true
 let crackedId = null
+
 export const firePottery = (wheelPottery, num1) => {
     
 
@@ -21,3 +22,8 @@ export const firePottery = (wheelPottery, num1) => {
     return fireObject
 
 }
+
+
+
+
+
