@@ -1,18 +1,17 @@
 
-
  let potteryId = 1
 export const makePottery = (shapeId, weightId, heightId) => {
    
-    const potteryObject ={
+    return {
+        id: potteryId++,
         shape: shapeId,
         weight: weightId,
-        height: heightId,
-        id: potteryId++
+        height: heightId
+        
     }
     
     
 
-    return potteryObject
 }
 
 

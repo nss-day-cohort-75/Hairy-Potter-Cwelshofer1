@@ -1,8 +1,10 @@
 {
   "name": "the-hairy-potter",
+  "type": "module",
   "version": "1.0.0",
   "description": "## Setup",
   "main": "index.js",
+
   "directories": {
     "test": "test"
   },
@@ -10,6 +12,7 @@
     "test": "jest --watchAll --verbose",
     "testonce": "jest --verbose"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nashville-software-school/the-hairy-potter.git"

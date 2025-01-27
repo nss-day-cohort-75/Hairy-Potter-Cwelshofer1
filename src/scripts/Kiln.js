@@ -5,7 +5,7 @@ export const firePottery = (wheelPottery, num1) => {
     
 
     const fireObject = {
-        kilnobject: wheelPottery,
+        ...wheelPottery,
         firingtemperature: num1,
         fired: firedId,
         cracked: crackedId,
