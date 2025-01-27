@@ -120,12 +120,21 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+
+   > First I imported usePottery from PotterCatalog onto my PotteryList page, it's a function that holds an array of all objects that can be sold.  Then I make a potteryList function and I put usePottery into a variable potvalue so I can use it for a for loop.Then I make a variable potHMTL to hold an empty string to store the HTML markup. Next I use a for loop so I can iterate each object in the potvalue array. I generate an HTML structure with template literals, this contains all of the information about selling each piece of pottery I embed the information with ${} example ${vase.weight}. At the end of the function I return potHTML which has all of the HMTL with the pottery information inside of it. Next I want to target the part of the index where I want to display the HTML. So I make another function to do that. I make the function renderPotteryToDom with the parameter of potHTML.
+   I make a variable that stores the function to target an id on the HTML.. (let potsList = document.getElementById('potteryList');).
+   Then I make an if statement to display the HTML there using the .innerHTML function it is saying if there is a potslist then let potslist.innnerHTML = potHTML so becuse potslist is already targeting the index, this will render the text on the DOM. The last step is to invoke the function that renders the HTML to the DOM. So I import potteryList renderPotteryToDOM to my main.js to I can invoke those functions and get the HTML to render. I store usePottery() in a variable potHTML and the next line I invoke renderPotteryToDOM with passing in potHTML as the parameter. So the renderPotteryToDom takes the HMTL markup from potHTML, targets the id of potteryList on the index, and displays all of the objects from the html markup to the DOM.
+
+
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/d752487e44fa4c1eb0f1aa7f1180eb5c
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+
+   > Because it is much cleaner code to seperate code into different modules, and makes it easier to read.
+
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+
+   > I would make a new if statement after the last one in potterCatalog.js saying if the object value equals cracked (potteryobj.cracked === true), then set the pottery object price to 2.50 (potteryObject.price = 2.50). Then I would push it to the array to be sold (potteryCatalog.push(potteryobj)) and that would be the end of my if statment. So that the list of pottery to be sold is updated with these new cracked objects now to be sold.
+
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/a793b193b2794950937408fc557460f2

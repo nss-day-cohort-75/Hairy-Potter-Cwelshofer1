@@ -1,8 +1,11 @@
 // Imports go first
+console.log("main.js is loaded")
 import { makePottery } from "./PotteryWheel.js"
 import { firePottery } from "./Kiln.js"
 import { toSellOrNotToSell } from "./PotterCatalog.js"
 import { usepottery } from "./PotterCatalog.js"
+import { potteryList, renderPotteryToDOM } from "./PotteryList.js"
+
 
 
 // Make 5 pieces of pottery at the wheel
@@ -42,8 +45,13 @@ let potFour = toSellOrNotToSell(pieceFour)
 console.log(potFour)
 let potFive = toSellOrNotToSell(pieceFive)
 console.log(potFive)
-
+console.log("-----------")
 const potteryData = usepottery()
 console.log(potteryData)
+
 // Invoke the component function that renders the HTML list
+const potHTML = potteryList()
+renderPotteryToDOM(potHTML)
+
+
 
